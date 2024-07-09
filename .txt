@@ -1,0 +1,80 @@
+Great topic! Customizing radio and checkbox styles with CSS can be a bit tricky, but it's definitely doable. You can use the `:checked` pseudo-class to target the checked state of the input elements, and then use CSS attributes like `background-color`, `border`, and `box-shadow` to change their appearance.
+
+Here's an example of how you can customize radio button styles:
+```
+/* Style the radio button */
+radio {
+  appearance: none;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+}
+
+/* Style the checked state */
+radio:checked {
+  background-color: #007bff;
+  border-color: #007bff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+```
+And here's an example of how you can customize checkbox styles:
+```
+/* Style the checkbox */
+checkbox {
+  appearance: none;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 10px;
+  cursor: pointer;
+}
+
+/* Style the checked state */
+checkbox:checked {
+  background-color: #007bff;
+  border-color: #007bff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+```
+You can also use CSS frameworks like Bootstrap or Tailwind CSS to customize the styles of radio buttons and checkboxes.
+
+Do you have any specific questions or need further assistance with customizing radio and checkbox styles?
+
+
+
+To validate the radio buttons, you can follow these steps:
+
+1. Get references to the radio buttons and the error span element using `document.getElementById`.
+2. Check if neither of the radio buttons is checked using the `checked` property.
+3. If neither is checked, display the error message in the error span element.
+4. If either radio button is checked, clear the error message.
+
+Here's the modified code:
+```
+const genEnq = document.getElementById('genEnq');
+const supportRequest = document.getElementById('supportRequest');
+const queryError = document.getElementById('queryError');
+
+if (!genEnq.checked && !supportRequest.checked) {
+  queryError.innerHTML = "Please select a query type";
+  return;
+} else {
+  queryError.innerHTML = "";
+}
+```
+Make sure to include this code in your form submission handler, so it runs when the user submits the form.
+
+If you're using a form submission event listener, you can add this code inside the event listener function. For example:
+```
+form.addEventListener('submit', function(event) {
+  event.preventDefault();
+  // ... other validation code ...
+  // Radio button validation
+  const genEnq = document.getElementById('genEnq');
+  const supportRequest = document.getElementById('supportRequest');
+  const queryError = document.getElementById('queryError');
+
+  if (!genEnq.checked && !supportRequest.checked) {
+    queryError
+```

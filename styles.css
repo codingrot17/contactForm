@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 16px;
+    font-family: "Karla", sans-serif;
+    background: hsl(148, 38%, 91%);
+    color: #282828;
+    position: relative;
+    padding: 0 25px;
+}
+
+.container {
+    position: relative;
+    background-color: hsl(0, 0%, 100%); 
+    max-width: 650px;
+    margin: 150px auto;
+    padding: 30px;
+    border-radius: 10px;
+    
+}
+
+.container h3 {
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 25px;
+    
+}
+
+.container form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    max-width: 100%;
+}
+
+.container form label::after {
+    content: "*";
+    color: hsl(169, 82%, 27%);
+    margin-left: 10px;
+}
+
+.container form input,
+.container form .query-type .query div,
+.container form textarea {
+    font-size: 18px;
+    border: 2px solid hsl(186, 15%, 59%);
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.error {
+    color: hsl(0, 66%, 54%);
+    /* display: none; */
+}
+
+
+
+.container form .name,
+.container form .query-type .query {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px; 
+}
+
+.container form .email {
+    display: flex;
+    flex-direction: column;
+}
+
+.container form .query-type .query div {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    
+}
+
+.container form .query-type .query div input,
+.container form .consent div input {
+    width: 30px;
+    padding: 0px;
+    margin: 0;
+}
+
+.container form .consent div,
+.success h3 {
+    display: flex;
+    gap: 15px;
+}
+
+.container form .submit {
+    background: hsl(169, 82%, 27%);
+    border: none;
+    color: hsl(0, 0%, 100%);
+}
+
+.container form .submit:hover {
+    background: hsl(187, 24%, 22%);
+}
+
+
+/* Message */
+.success {
+    display: none;
+    position: absolute;
+    top: -115px;
+    left: 10%;
+    background: hsl(187, 24%, 22%);
+    color: hsl(0, 0%, 100%);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+
+@media screen and (max-width: 540px){
+    .container form .name,
+.container form .query-type .query {
+    display: block;
+    
+}
+}
